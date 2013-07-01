@@ -1,0 +1,45 @@
+C:\Users\saad\Documents\ING 5\PFE\Walkinside\Ex2.Menu\WIExample2\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\saad\Documents\ING 5\PFE\Walkinside\Ex2.Menu\WIExample2\obj\Debug\WIExample2.dll
+C:\Users\saad\Documents\ING 5\PFE\Walkinside\Ex2.Menu\WIExample2\obj\Debug\WIExample2.pdb
+C:\Users\saad\Documents\ING 5\PFE\Walkinside\Ex2.Menu\WIExample2\obj\Debug\WIExample.ExportAssetData.resources
+C:\Users\saad\Documents\ING 5\PFE\Walkinside\Ex2.Menu\WIExample2\obj\Debug\Ex2.Menu.csproj.GenerateResource.Cache
+C:\Users\saad\Documents\ING 5\PFE\Walkinside\plugin_export_asset_list\WIExample2\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\saad\Documents\ING 5\PFE\Walkinside\plugin_export_asset_list\WIExample2\obj\Debug\WIExample.ExportAssetData.resources
+C:\Users\saad\Documents\ING 5\PFE\Walkinside\plugin_export_asset_list\WIExample2\obj\Debug\Ex2.Menu.csproj.GenerateResource.Cache
+C:\Users\saad\Documents\ING 5\PFE\Walkinside\plugin_export_asset_list\WIExample2\obj\Debug\WIExample2.dll
+C:\Users\saad\Documents\ING 5\PFE\Walkinside\plugin_export_asset_list\WIExample2\obj\Debug\WIExample2.pdb
+C:\Users\saad\AppData\Local\Apps\COMOS\COMOS Walkinside 6.2 (64 bit)\plugins\Application\WIExample2.dll
+C:\Users\saad\AppData\Local\Apps\COMOS\COMOS Walkinside 6.2 (64 bit)\plugins\Application\WIExample2.pdb
+C:\Users\saad\Documents\ING 5\PFE\Walkinside\Version finale\plugin_export_asset_list\WIExample2\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\saad\Documents\ING 5\PFE\Walkinside\Version finale\plugin_export_asset_list\WIExample2\obj\Debug\WIExample.Resource.resources
+C:\Users\saad\Documents\ING 5\PFE\Walkinside\Version finale\plugin_export_asset_list\WIExample2\obj\Debug\Ex2.Menu.csproj.GenerateResource.Cache
+C:\Users\saad\Documents\ING 5\PFE\Walkinside\Version finale\plugin_export_asset_list\WIExample2\obj\Debug\WIExample2.dll
+C:\Users\saad\Documents\ING 5\PFE\Walkinside\Version finale\plugin_export_asset_list\WIExample2\obj\Debug\WIExample2.pdb
+C:\Users\admin\AppData\Local\Apps\COMOS\COMOS Walkinside 6.2 (64 bit)\plugins\Application\WIExample2.dll
+C:\Users\admin\AppData\Local\Apps\COMOS\COMOS Walkinside 6.2 (64 bit)\plugins\Application\WIExample2.pdb
+C:\Users\admin\Desktop\SDK examples\plugin_export_asset_list\WIExample2\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\admin\Desktop\SDK examples\plugin_export_asset_list\WIExample2\obj\Debug\WIExample.Resource.resources
+C:\Users\admin\Desktop\SDK examples\plugin_export_asset_list\WIExample2\obj\Debug\Ex2.Menu.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\SDK examples\plugin_export_asset_list\WIExample2\obj\Debug\WIExample2.dll
+C:\Users\admin\Desktop\SDK examples\plugin_export_asset_list\WIExample2\obj\Debug\WIExample2.pdb
+C:\Users\thlacroi\git\plugin_export_asset_list\WIExample2\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\thlacroi\git\plugin_export_asset_list\WIExample2\obj\Debug\WIExample.Resource.resources
+C:\Users\thlacroi\git\plugin_export_asset_list\WIExample2\obj\Debug\Ex2.Menu.csproj.GenerateResource.Cache
+C:\Users\thlacroi\git\plugin_export_asset_list\WIExample2\obj\Debug\WIExample2.dll
+C:\Users\thlacroi\git\plugin_export_asset_list\WIExample2\obj\Debug\WIExample2.pdb
+C:\Users\AppData\Local\Apps\COMOS\COMOS Walkinside 6.2 (64 bit)\plugins\Application\WIExample2.dll
+C:\Users\AppData\Local\Apps\COMOS\COMOS Walkinside 6.2 (64 bit)\plugins\Application\WIExample2.pdb
+C:\Users\thlacroi\AppData\Local\Apps\COMOS\COMOS Walkinside 6.2 (64 bit)\plugins\Application\WIExample2.dll
+C:\Users\thlacroi\AppData\Local\Apps\COMOS\COMOS Walkinside 6.2 (64 bit)\plugins\Application\WIExample2.pdb
+C:\Users\thlacroi\git\plugin_export_asset_list\WIExample2\obj\Debug\WIExample.ExportScenarioView.resources
+D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\WIExample2\obj\Debug\ResolveAssemblyReference.cache
+D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\WIExample2\obj\Debug\WIExample.ExportScenarioView.resources
+D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\WIExample2\obj\Debug\WIExample.Resource.resources
+D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\WIExample2\obj\Debug\ResGen.read.1.tlog
+D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\WIExample2\obj\Debug\ResGen.write.1.tlog
+D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\WIExample2\obj\Debug\WIExample2.dll
+D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\WIExample2\obj\Debug\WIExample2.pdb
+D:\CapGemini\iALM\Walkinside\AppData\Local\Apps\COMOS\COMOS Walkinside 6.2 (64 bit)\plugins\Application\WIExample2.dll
+D:\CapGemini\iALM\Walkinside\AppData\Local\Apps\COMOS\COMOS Walkinside 6.2 (64 bit)\plugins\Application\WIExample2.pdb
+C:\Users\antmeuni\AppData\Local\Apps\COMOS\COMOS Walkinside 6.2 (64 bit)\plugins\Application\WIExample2.dll
+C:\Users\antmeuni\AppData\Local\Apps\COMOS\COMOS Walkinside 6.2 (64 bit)\plugins\Application\WIExample2.pdb

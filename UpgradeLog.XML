@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="WIExample2">
+</Property><Property Name="Fichier solution" Value="D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\WIExample2.sln">
+</Property><Property Name="Fichier d'options utilisateur" Value="D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\WIExample2.suo">
+</Property><Property Name="Date" Value="mercredi 27 février 2013">
+</Property><Property Name="Time" Value="15:40">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="WIExample2.sln" Description="Fichier correctement sauvegardé en tant que D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\Backup\WIExample2.sln">
+</Event><Event ErrorLevel="0" Project="" Source="WIExample2.suo" Description="Fichier correctement sauvegardé en tant que D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\Backup\WIExample2.suo">
+</Event><Event ErrorLevel="0" Project="Ex2.Menu" Source="WIExample2\Ex2.Menu.csproj" Description="Fichier projet correctement sauvegardé en tant que D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\Backup\WIExample2\Ex2.Menu.csproj">
+</Event><Event ErrorLevel="0" Project="Ex2.Menu" Source="WIExample2\Ex2.Menu.csproj.user" Description="Fichier utilisateur de projet correctement sauvegardé en tant que D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\Backup\WIExample2\Ex2.Menu.csproj.user">
+</Event><Event ErrorLevel="0" Project="Ex2.Menu" Source="WIExample2\Excel.cs" Description="Fichier correctement sauvegardé en tant que D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\Backup\WIExample2\Excel.cs">
+</Event><Event ErrorLevel="0" Project="Ex2.Menu" Source="WIExample2\ExportScenarioView.cs" Description="Fichier correctement sauvegardé en tant que D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\Backup\WIExample2\ExportScenarioView.cs">
+</Event><Event ErrorLevel="0" Project="Ex2.Menu" Source="WIExample2\ExportScenarioView.Designer.cs" Description="Fichier correctement sauvegardé en tant que D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\Backup\WIExample2\ExportScenarioView.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Ex2.Menu" Source="WIExample2\IVRExportAsset.cs" Description="Fichier correctement sauvegardé en tant que D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\Backup\WIExample2\IVRExportAsset.cs">
+</Event><Event ErrorLevel="0" Project="Ex2.Menu" Source="WIExample2\IVRExportScenario.cs" Description="Fichier correctement sauvegardé en tant que D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\Backup\WIExample2\IVRExportScenario.cs">
+</Event><Event ErrorLevel="0" Project="Ex2.Menu" Source="WIExample2\IVRWebRequestManager.cs" Description="Fichier correctement sauvegardé en tant que D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\Backup\WIExample2\IVRWebRequestManager.cs">
+</Event><Event ErrorLevel="0" Project="Ex2.Menu" Source="WIExample2\Resource.Designer.cs" Description="Fichier correctement sauvegardé en tant que D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\Backup\WIExample2\Resource.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Ex2.Menu" Source="WIExample2\WIPlugin.cs" Description="Fichier correctement sauvegardé en tant que D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\Backup\WIExample2\WIPlugin.cs">
+</Event><Event ErrorLevel="0" Project="Ex2.Menu" Source="WIExample2\Properties\AssemblyInfo.cs" Description="Fichier correctement sauvegardé en tant que D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\Backup\WIExample2\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Ex2.Menu" Source="WIExample2\ExportScenarioView.resx" Description="Fichier correctement sauvegardé en tant que D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\Backup\WIExample2\ExportScenarioView.resx">
+</Event><Event ErrorLevel="0" Project="Ex2.Menu" Source="WIExample2\Resource.resx" Description="Fichier correctement sauvegardé en tant que D:\CapGemini\iALM\Walkinside\Dev\plugin_export_asset_list\Backup\WIExample2\Resource.resx">
+</Event><Event ErrorLevel="0" Project="Ex2.Menu" Source="WIExample2\Ex2.Menu.csproj" Description="Projet correctement converti">
+</Event><Event ErrorLevel="3" Project="Ex2.Menu" Source="WIExample2\Ex2.Menu.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="WIExample2.sln" Description="Solution correctement convertie">
+</Event><Event ErrorLevel="3" Project="" Source="WIExample2.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Ex2.Menu" Source="WIExample2\Ex2.Menu.csproj" Description="Analyse terminée : la mise à niveau n'est pas requise pour les fichiers projet.">
+</Event></UpgradeLog>

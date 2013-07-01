@@ -1,0 +1,7 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\thlacroi\AppData\Local\Apps\COMOS\COMOS Walkinside 6.2 (64 bit)\WalkinsideNet2.exe</StartProgram>
+    <StartArguments>"D:\Walkinside\exported models\VRModelECE\ModelECE.vrp"</StartArguments>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,9 @@
+C:\Users\antmeuni\AppData\Local\Apps\COMOS\COMOS Walkinside 6.2 (64 bit)\plugins\Application\DataExporter.dll
+C:\Users\antmeuni\AppData\Local\Apps\COMOS\COMOS Walkinside 6.2 (64 bit)\plugins\Application\DataExporter.pdb
+D:\CapGemini\iALM\VirtualReality\WIPlugins\POC_WIPlugin_Export\WIExample2\obj\Debug\ResolveAssemblyReference.cache
+D:\CapGemini\iALM\VirtualReality\WIPlugins\POC_WIPlugin_Export\WIExample2\obj\Debug\DataExporter.ExportScenarioView.resources
+D:\CapGemini\iALM\VirtualReality\WIPlugins\POC_WIPlugin_Export\WIExample2\obj\Debug\DataExporter.Resource.resources
+D:\CapGemini\iALM\VirtualReality\WIPlugins\POC_WIPlugin_Export\WIExample2\obj\Debug\ResGen.read.1.tlog
+D:\CapGemini\iALM\VirtualReality\WIPlugins\POC_WIPlugin_Export\WIExample2\obj\Debug\ResGen.write.1.tlog
+D:\CapGemini\iALM\VirtualReality\WIPlugins\POC_WIPlugin_Export\WIExample2\obj\Debug\DataExporter.dll
+D:\CapGemini\iALM\VirtualReality\WIPlugins\POC_WIPlugin_Export\WIExample2\obj\Debug\DataExporter.pdb
