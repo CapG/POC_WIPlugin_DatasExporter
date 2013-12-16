@@ -25,7 +25,7 @@ namespace DataExporter
 
         public void ExportToExcel()
         {
-            DataExporter.currentViewer.UI.ShowInformation( Resource.FileCreated );
+            DataExporter.CurrentViewer.UI.ShowInformation( Resource.FileCreated );
 
             if ( Directory.Exists( Resource.TmpFolder ) )
             {
@@ -33,7 +33,7 @@ namespace DataExporter
                     Path.Combine( Resource.TmpFolder, string.Format( "{0}.csv", Resource.AssetsListFileName ) ),
                     Resource.AssetsFileColumns );
 
-                _excelService.WriteAssets( DataExporter.branch, ref csvFile );
+                _excelService.WriteAssets( DataExporter.Branch, ref csvFile );
 
                 _excelService.CloseFile( csvFile );
 

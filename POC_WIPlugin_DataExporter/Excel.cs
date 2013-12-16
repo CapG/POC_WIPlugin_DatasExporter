@@ -19,7 +19,7 @@ namespace DataExporter
             if (File.Exists(path))
             {
                 try { File.Delete(path); }
-                catch (Exception e) { DataExporter.currentViewer.UI.StatusMessage.Text = e.Message; }
+                catch (Exception e) { DataExporter.CurrentViewer.UI.StatusMessage.Text = e.Message; }
             }
             try
             {
@@ -29,7 +29,7 @@ namespace DataExporter
             }
             catch (Exception e)
             {
-                DataExporter.currentViewer.UI.StatusMessage.Text = e.Message;
+                DataExporter.CurrentViewer.UI.StatusMessage.Text = e.Message;
             }
             return csvFile;
         }
@@ -41,33 +41,7 @@ namespace DataExporter
                 csvFile.Flush();
                 csvFile.Close();
             }
-            catch (Exception e) { DataExporter.currentViewer.UI.StatusMessage.Text = e.Message; }
-        }
-
-        public static void WriteAssetToExcel(string name, string project, string x, string y, string z)
-        {
-            // Tag
-            if (name.StartsWith("/"))
-                csvFile.Write(name.Substring(1));
-            else
-                csvFile.Write(name);
-            csvFile.Write(";");
-            // Project
-            csvFile.Write(project);
-            csvFile.Write(";");
-            // Position
-            csvFile.Write(x);
-            csvFile.Write(";");
-            csvFile.Write(y);
-            csvFile.Write(";");
-            csvFile.Write(z);
-            csvFile.Write(";");
-            // Lien
-            if (name.StartsWith("/"))
-                csvFile.Write(string.Format(Resource.UrlRefTag,project,name.Substring(1)));
-            else
-                csvFile.Write(string.Format(Resource.UrlRefTag,project,name));
-            csvFile.Write("\r\n");
+            catch (Exception e) { DataExporter.CurrentViewer.UI.StatusMessage.Text = e.Message; }
         }
 
         public static void WriteScenarioToExcel(string name, string project, string scenario)

@@ -11,21 +11,21 @@ namespace DataExporter
     {
         public void WriteAssets(IVRBranch root, ref StreamWriter file)
         {
-            DataExporter.currentViewer.UI.SetPercentage((int) root.ID / DataExporter.nbBranch);
-            DataExporter.currentViewer.UI.ShowInformation(string.Format(Resource.ExportBranch, root.Name));
+            DataExporter.CurrentViewer.UI.SetPercentage((int) root.ID / DataExporter.NbBranches);
+            DataExporter.CurrentViewer.UI.ShowInformation(string.Format(Resource.ExportBranch, root.Name));
 
             string name = root.Name;
             if( name.StartsWith( "/" ) )
                 name = name.Substring( 1 );
 
-            file.Write( String.Format( "{0};{1};{2};{3};{4};{5}\r\n",
+            file.Write( String.Format("{0};{1};{2};{3};{4};{5}\r\n",
                 name,
                 root.Project.Name,
                 root.OBB.Position.X.ToString(),
                 root.OBB.Position.Y.ToString(),
-                root.OBB.Position.Z.ToString()),
+                root.OBB.Position.Z.ToString(),
                 string.Format( Resource.UrlRefTag, root.Project.Name, name )
-                );
+                ));
 
             foreach( IVRBranch branch in root.Children )
             {
@@ -54,7 +54,7 @@ namespace DataExporter
             if( File.Exists( path ) )
             {
                 try { File.Delete( path ); }
-                catch( Exception e ) { DataExporter.currentViewer.UI.StatusMessage.Text = e.Message; }
+                catch( Exception e ) { DataExporter.CurrentViewer.UI.StatusMessage.Text = e.Message; }
             }
 
             StreamWriter csvFile = new StreamWriter( path, true );
@@ -71,7 +71,7 @@ namespace DataExporter
                 file.Flush();
                 file.Close();
             }
-            catch( Exception e ) { DataExporter.currentViewer.UI.StatusMessage.Text = e.Message; }
+            catch( Exception e ) { DataExporter.CurrentViewer.UI.StatusMessage.Text = e.Message; }
         }
     }
 }

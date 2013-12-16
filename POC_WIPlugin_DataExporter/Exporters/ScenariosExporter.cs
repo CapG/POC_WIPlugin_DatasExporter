@@ -22,7 +22,7 @@ namespace DataExporter
 
         public void ExportScenario( string[] args )
         {
-            DataExporter.currentViewer.UI.ShowInformation(Resource.DecompressScenario);
+            DataExporter.CurrentViewer.UI.ShowInformation(Resource.DecompressScenario);
 
             Decompress(args);
 

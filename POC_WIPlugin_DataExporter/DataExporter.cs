@@ -41,9 +41,9 @@ namespace DataExporter
         ToolStripMenuItem m_ToolStripItem1 = null;
         ToolStripItem m_ToolStripItem2 = null;
 
-        public static IVRViewerSdk currentViewer = null;
-        public static IVRBranch branch = null;
-        public static int nbBranch = int.MaxValue;
+        public static IVRViewerSdk CurrentViewer = null;
+        public static IVRBranch Branch = null;
+        public static int NbBranches = int.MaxValue;
 
         Thread processThread;
 
@@ -54,7 +54,7 @@ namespace DataExporter
         /// <returns>True if creation of plugin succeeded.</returns>
         public bool CreatePlugin(IVRViewerSdk viewer)
         {
-            currentViewer = viewer;
+            CurrentViewer = viewer;
 
             // Export scenario
             m_ToolStripItem1 = viewer.UI.PluginMenu.DropDownItems.Add(Resource.TitleExportScenarioMenu) as ToolStripMenuItem;
@@ -66,8 +66,8 @@ namespace DataExporter
             viewer.ProjectManager.OnProjectOpen += new VRProjectEventHandler(ProjectManager_OnProjectOpen);
 
             // HTTP Server
-            currentViewer.HTTPServer.Start();
-            currentViewer.HTTPServer.AddEvent("WVRequest", new VRHTTPEventHandler(OnReceiveWebRequest));
+            CurrentViewer.HTTPServer.Start();
+            CurrentViewer.HTTPServer.AddEvent("WVRequest", new VRHTTPEventHandler(OnReceiveWebRequest));
             return true;
         }
 
@@ -78,8 +78,8 @@ namespace DataExporter
                 IVRBranch[] rootarray = e.Project.ProjectManager.CurrentProject.BranchManager.GetBranchesByType(0);
                 if (rootarray.Length != 0)
                 {
-                    branch = rootarray[0];
-                    nbBranch = rootarray.Length;
+                    Branch = rootarray[0];
+                    NbBranches = rootarray.Length;
                 }
             }
         }
@@ -137,10 +137,10 @@ namespace DataExporter
             viewer.UI.PluginMenu.DropDownItems.Remove(m_ToolStripItem1);
             m_ToolStripItem1 = null;
             // HTTP server
-            currentViewer.HTTPServer.RemoveEvent("WVRequest", new VRHTTPEventHandler(OnReceiveWebRequest));
-            currentViewer.HTTPServer.Stop();
+            CurrentViewer.HTTPServer.RemoveEvent("WVRequest", new VRHTTPEventHandler(OnReceiveWebRequest));
+            CurrentViewer.HTTPServer.Stop();
 
-            branch = null;
+            Branch = null;
             return true;
         }
     }

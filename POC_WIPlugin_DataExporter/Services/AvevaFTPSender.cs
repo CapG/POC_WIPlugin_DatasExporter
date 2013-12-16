@@ -13,7 +13,7 @@ namespace DataExporter
 
         public AvevaFTPSender()
         {
-            _client = new SftpClient( "194.2.93.194", "Administrator", "AdminPOCNUC01" );
+            _client = new SftpClient( "194.2.93.194", "Administrateur", "AdminPOCNUC01" );
         }
 
         public void Send( string sendedFilePath, string newFileName )

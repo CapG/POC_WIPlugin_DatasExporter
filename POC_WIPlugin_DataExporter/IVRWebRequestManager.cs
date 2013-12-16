@@ -41,7 +41,7 @@ namespace DataExporter
             string error = string.Empty;
             string filePath;
 
-            IVRProject currentProject = DataExporter.currentViewer.ProjectManager.CurrentProject;
+            IVRProject currentProject = DataExporter.CurrentViewer.ProjectManager.CurrentProject;
             if (currentProject == null || currentProject.Name.CompareTo(projectName) != 0)
             {
                 filePath = RecursiveSearchFile(projectName + ".vrp", Resource.VRModelDirectory);
@@ -50,7 +50,7 @@ namespace DataExporter
                     error = "Project not found";
                     return error;
                 }
-                DataExporter.currentViewer.ProjectManager.LoadProject(filePath, out error);
+                DataExporter.CurrentViewer.ProjectManager.LoadProject(filePath, out error);
             }
             return error;
         }
@@ -58,24 +58,24 @@ namespace DataExporter
         protected static string ScenarioRequest(string scenarioName)
         {
             string error = string.Empty;
-            IVRScriptManager scriptManager = DataExporter.currentViewer.ProjectManager.CurrentProject.ScriptManager;
+            IVRScriptManager scriptManager = DataExporter.CurrentViewer.ProjectManager.CurrentProject.ScriptManager;
             IVRScript script = scriptManager.Scripts.FirstOrDefault(var => var.Name == scenarioName);
             if (script == null)
             {
                 string filePath = RecursiveSearchFile(scenarioName+".7z", Resource.ScenarioDirectory);
                 if (filePath != string.Empty)
                 {
-                    script = DataExporter.currentViewer.ProjectManager.CurrentProject.ScriptManager.AddScript(filePath, false); 
+                    script = DataExporter.CurrentViewer.ProjectManager.CurrentProject.ScriptManager.AddScript(filePath, false); 
                 }
                 else
                 {
                     // TODO Mettre un message scenario not found
-                    DataExporter.currentViewer.UI.ShowInformation("scenario not found");
+                    DataExporter.CurrentViewer.UI.ShowInformation("scenario not found");
                 }
             }
             if (!script.IsRunning)
             {
-                DataExporter.currentViewer.UI.MainForm.Invoke((MethodInvoker)delegate { script.Launch(); });
+                DataExporter.CurrentViewer.UI.MainForm.Invoke((MethodInvoker)delegate { script.Launch(); });
             }
             return error;
         }
@@ -83,7 +83,7 @@ namespace DataExporter
         protected static string TagRequest(string tagName)
         {
             string error = string.Empty;
-            IVRBranch branch = DataExporter.currentViewer.ProjectManager.CurrentProject.BranchManager.GetBranchesByType(0)[0];
+            IVRBranch branch = DataExporter.CurrentViewer.ProjectManager.CurrentProject.BranchManager.GetBranchesByType(0)[0];
             try
             {
                 branch = RecursiveSearchBranch(branch, tagName);

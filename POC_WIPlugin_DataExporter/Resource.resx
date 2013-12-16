@@ -127,7 +127,7 @@
     <value>Decompress scenario</value>
   </data>
   <data name="EnsureExportAsset" xml:space="preserve">
-    <value>L'export peut prendre quelques minutes. Etes-vous sur de vouloir continuer?</value>
+    <value>L'export peut prendre quelques minutes. Etes-vous sûr de vouloir continuer ?</value>
   </data>
   <data name="ExcelName" xml:space="preserve">
     <value>{0}.csv</value>
@@ -166,6 +166,6 @@
     <value>http://localhost:5050/WVRequest?Project={0}&amp;Tag={1}</value>
   </data>
   <data name="VRModelDirectory" xml:space="preserve">
-    <value>D:\CapGemini\iALM\Walkinside\exported models\VRModelECE</value>
+    <value>D:\[02]_Capgemini\[01]_iALM-R&amp;D\[01]_Innovation\[06]_Walkinside\Dev\Models\ExportedModels\VRModelECE</value>
   </data>
 </root>
