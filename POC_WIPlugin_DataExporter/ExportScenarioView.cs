@@ -8,16 +8,20 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using vrcontext.walkinside.sdk;
+using System.Collections;
+using DataExporter.Fuck.Impl;
 
 namespace DataExporter
 {
     public partial class ExportScenarioView : VRForm
     {
         private string[] _exportList;
+        private ScenariosExportService _scenariosExportService;
 
         public ExportScenarioView()
         {
             InitializeComponent();
+            _scenariosExportService = new ScenariosExportService();
         }
 
         private void folderPath_Click( object sender, EventArgs e )
@@ -37,13 +41,10 @@ namespace DataExporter
         {
             Generate.Enabled = false;
 
-            ScenarioExporter process = new ScenarioExporter();
-
-            string[] s = null;
-            for( int i = 0; i < listView1.Items.Count; i++ )
-                s[i] = listView1.Items[i].Text;
-
-            process.ExportScenario( s );
+            foreach( ListViewItem item in listView1.Items )
+            {
+                _scenariosExportService.ExportScenariosFrom( item.Text );
+            }
 
             Generate.Enabled = true;
         }

@@ -4,6 +4,8 @@ using System.Text;
 using System.Windows.Forms;
 using vrcontext.walkinside.sdk;
 using System.Threading;
+using DataExporter.Model;
+using DataExporter.Impl;
 
 namespace DataExporter
 {
@@ -15,7 +17,7 @@ namespace DataExporter
     /// </remarks>
     public class DataExporter : IVRPlugin
     {
-        internal static VRPluginDescriptor pDescriptor = new VRPluginDescriptor(VRPluginType.Unknown, 1, "", "19/01/2009", "Export to AVEVA", "Export scenario and asset data and active HTTP server", "Vrcontext_SDK");
+        internal static VRPluginDescriptor pDescriptor = new VRPluginDescriptor( VRPluginType.Unknown, 1, "", "19/01/2009", "Export to AVEVA", "Export scenario and asset data and active HTTP server", "Vrcontext_SDK" );
         /// <summary>
         /// Get the plugin descriptor of this walkinside module without creating a plugin instance of type WIPlugin.
         /// </summary>
@@ -41,8 +43,10 @@ namespace DataExporter
         ToolStripMenuItem m_ToolStripItem1 = null;
         ToolStripItem m_ToolStripItem2 = null;
 
+        public IAssetsExportService _assetsExportService;
+
         public static IVRViewerSdk CurrentViewer = null;
-        public static IVRBranch Branch = null;
+        public static IVRBranch Root = null;
         public static int NbBranches = int.MaxValue;
 
         Thread processThread;
@@ -52,33 +56,35 @@ namespace DataExporter
         /// </summary>
         /// <param name="viewer">The context of the viewer when plugin is created.</param>
         /// <returns>True if creation of plugin succeeded.</returns>
-        public bool CreatePlugin(IVRViewerSdk viewer)
+        public bool CreatePlugin( IVRViewerSdk viewer )
         {
             CurrentViewer = viewer;
 
+            _assetsExportService = new AssetsExportService();
+
             // Export scenario
-            m_ToolStripItem1 = viewer.UI.PluginMenu.DropDownItems.Add(Resource.TitleExportScenarioMenu) as ToolStripMenuItem;
-            viewer.UI.RegisterVRFormWithMenu(Keys.NoName, m_ToolStripItem1, typeof(ExportScenarioView));
+            m_ToolStripItem1 = viewer.UI.PluginMenu.DropDownItems.Add( Resource.TitleExportScenarioMenu ) as ToolStripMenuItem;
+            viewer.UI.RegisterVRFormWithMenu( Keys.NoName, m_ToolStripItem1, typeof( ExportScenarioView ) );
 
             // Export asset
-            m_ToolStripItem2 = viewer.UI.PluginMenu.DropDownItems.Add(Resource.TitleExportAssetMenu);
-            m_ToolStripItem2.Click += new EventHandler(m_ToolStripItem_Click);
-            viewer.ProjectManager.OnProjectOpen += new VRProjectEventHandler(ProjectManager_OnProjectOpen);
+            m_ToolStripItem2 = viewer.UI.PluginMenu.DropDownItems.Add( Resource.TitleExportAssetMenu );
+            m_ToolStripItem2.Click += new EventHandler( m_ToolStripItem_Click );
+            viewer.ProjectManager.OnProjectOpen += new VRProjectEventHandler( ProjectManager_OnProjectOpen );
 
             // HTTP Server
             CurrentViewer.HTTPServer.Start();
-            CurrentViewer.HTTPServer.AddEvent("WVRequest", new VRHTTPEventHandler(OnReceiveWebRequest));
+            CurrentViewer.HTTPServer.AddEvent( "WVRequest", new VRHTTPEventHandler( OnReceiveWebRequest ) );
             return true;
         }
 
-        static void ProjectManager_OnProjectOpen(object sender, VRProjectEventArgs e)
+        static void ProjectManager_OnProjectOpen( object sender, VRProjectEventArgs e )
         {
-            if (e.Project.ProjectManager.CurrentProject.Name != "startup")
+            if( e.Project.ProjectManager.CurrentProject.Name != "startup" )
             {
-                IVRBranch[] rootarray = e.Project.ProjectManager.CurrentProject.BranchManager.GetBranchesByType(0);
-                if (rootarray.Length != 0)
+                IVRBranch[] rootarray = e.Project.ProjectManager.CurrentProject.BranchManager.GetBranchesByType( 0 );
+                if( rootarray.Length != 0 )
                 {
-                    Branch = rootarray[0];
+                    Root = rootarray[0];
                     NbBranches = rootarray.Length;
                 }
             }
@@ -87,33 +93,31 @@ namespace DataExporter
         /// <summary>
         /// The event handler when a user clicks my menu item called "Example 2"
         /// </summary>
-        void m_ToolStripItem_Click(object sender, EventArgs e)
+        void m_ToolStripItem_Click( object sender, EventArgs e )
         {
-            DialogResult result = MessageBox.Show(Resource.EnsureExportAsset, Resource.TitleExportAssetMenu, MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            DialogResult result = MessageBox.Show( Resource.EnsureExportAsset, Resource.TitleExportAssetMenu, MessageBoxButtons.YesNo );
+            if( result == DialogResult.Yes )
             {
-                AssetsExporter process = new AssetsExporter();
-                processThread = new Thread(process.ExportToExcel);
+                processThread = new Thread( _assetsExportService.ExportAllAssets );
                 processThread.IsBackground = true;
                 processThread.Start();
-                while (!processThread.IsAlive);
-
-                Thread.Sleep(1);
+                while( !processThread.IsAlive ) ;
+                Thread.Sleep( 1 );
                 processThread.Join();
             }
         }
 
-        void OnReceiveWebRequest(object sender, VRCollectionEventArgs args)
+        void OnReceiveWebRequest( object sender, VRCollectionEventArgs args )
         {
             string error = string.Empty;
             Dictionary<string, string> l_RequestHTTP = new Dictionary<string, string>();
-            for (int i = 0; i < args.Values.Count; i++)
+            for( int i = 0; i < args.Values.Count; i++ )
             {
-                l_RequestHTTP.Add(args.Values.AllKeys[i], args.Values[i]);
+                l_RequestHTTP.Add( args.Values.AllKeys[i], args.Values[i] );
                 //WIPlugin.currentViewer.UI.StatusMessage.Text = "Analyse web request: " + args.Values.AllKeys[i] + " = " + args.Values[i];
             }
-            error = IVRWebRequestManager.AnalysisWebRequest(l_RequestHTTP);
-            if (error.CompareTo(string.Empty) != 0)
+            error = IVRWebRequestManager.AnalysisWebRequest( l_RequestHTTP );
+            if( error.CompareTo( string.Empty ) != 0 )
             {
                 //WIPlugin.currentViewer.UI.StatusMessage.Text = error;
             }
@@ -125,22 +129,22 @@ namespace DataExporter
         /// </summary>
         /// <param name="viewer">The context of the viewer when plugin is created.</param>
         /// <returns>True if destruction of plugin succeeded.</returns>
-        public bool DestroyPlugin(IVRViewerSdk viewer)
+        public bool DestroyPlugin( IVRViewerSdk viewer )
         {
             // Export scenario
             m_ToolStripItem2.Click -= m_ToolStripItem_Click;
-            viewer.UI.PluginMenu.DropDownItems.Remove(m_ToolStripItem2);
+            viewer.UI.PluginMenu.DropDownItems.Remove( m_ToolStripItem2 );
             m_ToolStripItem2 = null;
             // Export asset
-            viewer.ProjectManager.OnProjectOpen -= new VRProjectEventHandler(ProjectManager_OnProjectOpen);
-            viewer.UI.UnregisterVRFORM(m_ToolStripItem1, typeof(ExportScenarioView));
-            viewer.UI.PluginMenu.DropDownItems.Remove(m_ToolStripItem1);
+            viewer.ProjectManager.OnProjectOpen -= new VRProjectEventHandler( ProjectManager_OnProjectOpen );
+            viewer.UI.UnregisterVRFORM( m_ToolStripItem1, typeof( ExportScenarioView ) );
+            viewer.UI.PluginMenu.DropDownItems.Remove( m_ToolStripItem1 );
             m_ToolStripItem1 = null;
             // HTTP server
-            CurrentViewer.HTTPServer.RemoveEvent("WVRequest", new VRHTTPEventHandler(OnReceiveWebRequest));
+            CurrentViewer.HTTPServer.RemoveEvent( "WVRequest", new VRHTTPEventHandler( OnReceiveWebRequest ) );
             CurrentViewer.HTTPServer.Stop();
 
-            Branch = null;
+            Root = null;
             return true;
         }
     }

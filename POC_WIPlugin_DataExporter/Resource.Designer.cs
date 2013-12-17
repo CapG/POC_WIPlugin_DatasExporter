@@ -133,7 +133,7 @@ namespace DataExporter {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à D:\CapGemini\iALM\Walkinside\Scenarii.
+        ///   Recherche une chaîne localisée semblable à D:\[02]_Capgemini\[01]_iALM-R&amp;D\[01]_Innovation\[06]_Walkinside\Dev\Scenarii.
         /// </summary>
         internal static string ScenarioDirectory {
             get {
@@ -144,9 +144,18 @@ namespace DataExporter {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à TagName;ProjectName;ScenarioName;UrlRef.
         /// </summary>
-        internal static string ScenarioFileColumns {
+        internal static string ScenariosFileColumns {
             get {
-                return ResourceManager.GetString("ScenarioFileColumns", resourceCulture);
+                return ResourceManager.GetString("ScenariosFileColumns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à D:\Temp\Scenarii.
+        /// </summary>
+        internal static string ScenariosFileTmpDir {
+            get {
+                return ResourceManager.GetString("ScenariosFileTmpDir", resourceCulture);
             }
         }
         
@@ -178,11 +187,11 @@ namespace DataExporter {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à D:\\Temp.
+        ///   Recherche une chaîne localisée semblable à D:\Temp.
         /// </summary>
-        internal static string TmpFolder {
+        internal static string TmpDir {
             get {
-                return ResourceManager.GetString("TmpFolder", resourceCulture);
+                return ResourceManager.GetString("TmpDir", resourceCulture);
             }
         }
         

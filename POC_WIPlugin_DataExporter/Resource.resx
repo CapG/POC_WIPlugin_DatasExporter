@@ -142,10 +142,13 @@
     <value>Moving file to AVEVA</value>
   </data>
   <data name="ScenarioDirectory" xml:space="preserve">
-    <value>D:\CapGemini\iALM\Walkinside\Scenarii</value>
+    <value>D:\[02]_Capgemini\[01]_iALM-R&amp;D\[01]_Innovation\[06]_Walkinside\Dev\Scenarii</value>
   </data>
-  <data name="ScenarioFileColumns" xml:space="preserve">
+  <data name="ScenariosFileColumns" xml:space="preserve">
     <value>TagName;ProjectName;ScenarioName;UrlRef</value>
+  </data>
+  <data name="ScenariosFileTmpDir" xml:space="preserve">
+    <value>D:\Temp\Scenarii</value>
   </data>
   <data name="ScenariosListFileName" xml:space="preserve">
     <value>scenarios</value>
@@ -156,8 +159,8 @@
   <data name="TitleExportScenarioMenu" xml:space="preserve">
     <value>Export scenario</value>
   </data>
-  <data name="TmpFolder" xml:space="preserve">
-    <value>D:\\Temp</value>
+  <data name="TmpDir" xml:space="preserve">
+    <value>D:\Temp</value>
   </data>
   <data name="UrlRefScenario" xml:space="preserve">
     <value>http://localhost:5050/WVRequest?Project={0}&amp;Scenario={1}</value>
