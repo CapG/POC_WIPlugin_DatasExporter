@@ -64,7 +64,6 @@ namespace DataExporter.Impl.Scenarios
         {
             //To do
             //+ Checks
-
             foreach( var data in scenarios )
             {
                 string scenarioName = data.Key;

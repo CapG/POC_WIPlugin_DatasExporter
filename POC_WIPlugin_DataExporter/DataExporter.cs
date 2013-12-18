@@ -101,9 +101,6 @@ namespace DataExporter
                 processThread = new Thread( _assetsExportService.ExportAllAssets );
                 processThread.IsBackground = true;
                 processThread.Start();
-                while( !processThread.IsAlive ) ;
-                Thread.Sleep( 1 );
-                processThread.Join();
             }
         }
 
