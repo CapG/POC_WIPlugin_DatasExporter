@@ -96,10 +96,13 @@ namespace DataExporter
                 processThread = new Thread(process.ExportToExcel);
                 processThread.IsBackground = true;
                 processThread.Start();
+<<<<<<< origin/master
                 while (!processThread.IsAlive);
 
                 Thread.Sleep(1);
                 processThread.Join();
+=======
+>>>>>>> local
             }
         }
 
